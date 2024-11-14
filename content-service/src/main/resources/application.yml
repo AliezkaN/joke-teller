@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: content-service
+  profiles:
+    active: openai
+
+server:
+  port: 8080
