@@ -21,6 +21,7 @@
 
     <modules>
         <module>notification-service</module>
+        <module>content-service</module>
     </modules>
 
     <dependencyManagement>
