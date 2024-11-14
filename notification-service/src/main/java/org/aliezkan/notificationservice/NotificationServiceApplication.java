@@ -1,13 +1,13 @@
-package org.aliezkan.emailsender;
+package org.aliezkan.notificationservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EmailSenderApplication {
+public class NotificationServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EmailSenderApplication.class, args);
+        SpringApplication.run(NotificationServiceApplication.class, args);
     }
 
 }

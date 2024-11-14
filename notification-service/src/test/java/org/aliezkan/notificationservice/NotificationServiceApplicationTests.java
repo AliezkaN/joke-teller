@@ -1,10 +1,10 @@
-package org.aliezkan.emailsender;
+package org.aliezkan.notificationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EmailSenderApplicationTests {
+class NotificationServiceApplicationTests {
 
     @Test
     void contextLoads() {
