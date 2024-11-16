@@ -9,10 +9,12 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.client.RestClient;
 
-import java.util.Collections;
+import static java.util.Collections.singletonList;
 
 @RequiredArgsConstructor
 public class OpenAIJokeContentProvider implements JokeContentProvider<OpenAIResponse> {
+
+    private static final String PROMPT = "Tell me a joke";
 
     private final OpenAIProperties properties;
     private final RestClient restClient;
@@ -27,9 +29,7 @@ public class OpenAIJokeContentProvider implements JokeContentProvider<OpenAIResp
                 .body(OpenAIRequest.builder()
                         .withModel(properties.getModel())
                         .withRole(properties.getRole())
-                        .withContent(Collections.singletonList(
-                                "Tell me a joke"
-                        ))
+                        .withContent(singletonList(PROMPT))
                         .build())
                 .retrieve()
                 .body(OpenAIResponse.class);
